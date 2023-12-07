@@ -16,6 +16,8 @@ jobs:
           node-version: 18
       - run: npm install
       - run: npm run build
-      - run: npm run deploy -- --verbose
+      - run: cat package.json
+      - run: cat angular.json
+      - run: npm run deploy 
         env:
           NODE_AUTH_TOKEN: ${{secrets.KALOUSER}}
