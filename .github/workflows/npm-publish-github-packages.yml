@@ -29,4 +29,3 @@ jobs:
       with:
         github_token: ${{ secrets.KALOUSER }}
         publish_dir: dist/fundamental
-        enable_jekyll: true
