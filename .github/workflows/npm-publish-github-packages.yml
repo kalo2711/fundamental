@@ -18,6 +18,8 @@ jobs:
       - run: npm run build
       - run: cat package.json
       - run: cat angular.json
-      - run: npm run deploy 
+      - run: |
+          set -x
+          npm run deploy
         env:
           NODE_AUTH_TOKEN: ${{secrets.KALOUSER}}
