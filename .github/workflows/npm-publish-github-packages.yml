@@ -14,12 +14,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - run: ngh --no-silent
       - run: npm install
       - run: npm run build
       - run: cat package.json
       - run: cat angular.json
-      - run: |
-          set -x
-          npm run deploy
+      - run: npm run deploy
         env:
           NODE_AUTH_TOKEN: ${{secrets.KALOUSER}}
